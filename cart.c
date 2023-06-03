@@ -139,15 +139,15 @@ int _div(int a, int b, int *r) {
   return q; // Quotient
 }
 
-int mod(int a, int b) {
-  int r;
-  div(a, b);
-  return r;
-}
-
 int div(int a, int b) {
   int r;
   return _div(a, b, &r);
+}
+
+int mod(int a, int b) {
+  int r;
+  _div(a, b, &r);
+  return r;
 }
 
 int mul(int a, int b) {
